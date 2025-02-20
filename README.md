@@ -1,6 +1,12 @@
-# Docker WSL Wrapper
+# Docker WSL Bridge
 
 A Go-based utility that provides seamless integration between Windows and Docker commands through Windows Subsystem for Linux (WSL). This tool allows Windows users to execute Docker and Docker Compose commands natively while the actual Docker engine runs in WSL.
+
+## Why docker-wsl-bridge?
+
+Docker Desktop has been a go-to solution for many Windows users aiming to run Docker containers. However, its resource-intensive nature can be a concern for those seeking a more streamlined setup. To address this, I've developed docker-wsl-bridge, a lightweight utility that facilitates seamless Docker command execution between Windows and the Windows Subsystem for Linux (WSL).
+
+While Docker Desktop simplifies container management on Windows, it often consumes significant system resources, which can be overkill for users who prefer a minimalist environment. docker-wsl-bridge offers a solution by allowing users to execute Docker and Docker Compose commands directly from the Windows command line, utilizing the Docker engine running within a WSL distribution. This approach eliminates the need for Docker Desktop, resulting in a more efficient and lightweight development environment.
 
 ## Features
 
@@ -20,13 +26,13 @@ A Go-based utility that provides seamless integration between Windows and Docker
 ## Installation
 
 1. Clone this repository:
-   ```bash
+   ```powershell
    git clone https://github.com/mhmmdmndn/docker-wsl-bridge.git
    cd docker-wsl-wrapper
    ```
 
 2. Build the executables:
-   ```bash
+   ```powershell
    go build -o docker.exe docker-wrapper.go
    go build -o docker-compose.exe docker-composer-wrapper.go
    ```
@@ -37,7 +43,7 @@ A Go-based utility that provides seamless integration between Windows and Docker
 
 Once installed, you can use the Docker commands directly from Windows Command Prompt or PowerShell:
 
-```bash
+```powershell
 # Docker commands
 docker ps
 docker images
