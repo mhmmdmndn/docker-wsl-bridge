@@ -21,7 +21,7 @@ A Go-based utility that provides seamless integration between Windows and Docker
 
 1. Clone this repository:
    ```bash
-   git clone https://github.com/mhmmdmndn/docker-wsl-wrapper.git
+   git clone https://github.com/mhmmdmndn/docker-wsl-bridge.git
    cd docker-wsl-wrapper
    ```
 
